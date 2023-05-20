@@ -1,10 +1,10 @@
 pipeline {
-    agent {label 'Jenkins'}
-options {
-        // Timeout counter starts AFTER agent is allocated
-    timestamps() 
-   
-    stages {
+    agent any
+    environment{
+        microcare ='academy'
+        devops ='customvariables'
+    }
+     stages {
         stage('Build') {
             steps {
                 echo 'Building..'
