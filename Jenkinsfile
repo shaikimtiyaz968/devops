@@ -7,12 +7,14 @@ pipeline {
      stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo '${USER}'
+                //  sh "printenv | sort"
             }
         }
-        stage('Test') {
+        stage('Build1') {
             steps {
-                echo 'Testing..'
+                echo '${microcare}'
+                echo '${devops}'
             }
         }
         stage('Deploy') {
