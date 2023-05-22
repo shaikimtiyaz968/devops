@@ -17,5 +17,5 @@ node{
     sshCommand remote : remote, command: "pwd"
       sshCommand remote : remote, command: "ls -lrt"
   }     
-  
+}
   
