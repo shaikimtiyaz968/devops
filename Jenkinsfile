@@ -22,6 +22,5 @@ node{
       sshCommand remote : remote, command: "cd imtiyaz_new"
      sshCommand remote : remote, command: "pwd"
      shCommand remote : remote, command: "ls -lrt"
-     shCommand remote : remote, command: "history"
   }  
         }
