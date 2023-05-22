@@ -6,6 +6,9 @@ node{
   remote.user = 'opc'
   remote.password = 'Muzammil073#'
   remote.allowAnyHosts = true
+    stage('checkout') {
+           checkout scm
+  }  
   stage('Remote SSH') {
    // writeFile file: 'abc.sh', text: 'ls -lrt'
    // sshScript remote: remote, script: "abc.sh"
@@ -16,11 +19,8 @@ node{
   }     
   
    stage('Remote SSH 2') {
-   // writeFile file: 'abc.sh', text: 'ls -lrt'
-   // sshScript remote: remote, script: "abc.sh"
-      sshCommand remote : remote, command: "sudo mkdir devopsss"
-      sshCommand remote : remote, command: "cd devopsss"
-     sshCommand remote : remote, command: "pwd"
-     shCommand remote : remote, command: "ls -lrt"
+   sshScript remote: remote, script: "./micro/print.sh"
   }  
-        }
+  stage('Remote SSH 3') {
+   sshScript remote: remote, script: "./micro/args.sh"
+  }  
