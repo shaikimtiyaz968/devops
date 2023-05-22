@@ -14,4 +14,14 @@ node{
     sshCommand remote : remote, command: "pwd"
       sshCommand remote : remote, command: "ls -lrt"
   }     
+  
+   stage('Remote SSH 2') {
+   // writeFile file: 'abc.sh', text: 'ls -lrt'
+   // sshScript remote: remote, script: "abc.sh"
+      sshCommand remote : remote, command: "sudo mkdir imtiyaz_new"
+      sshCommand remote : remote, command: "cd imtiyaz_new"
+     sshCommand remote : remote, command: "pwd"
+     shCommand remote : remote, command: "ls -lrt"
+     shCommand remote : remote, command: "history"
+  }  
         }
