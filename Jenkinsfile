@@ -1,25 +1,26 @@
 pipeline {
     agent any
-    environment{
-        microcare ='academy'
-        devops ='customvariables'
+    stages{
+        stage('check out') {
+            steps {
+                checkout scm 
+            }
     }
-     stages {
-        stage('Build') {
+  
+      stage('Build Image') {
             steps {
-                echo '${USER}'
-                //  sh "printenv | sort"
+                sh 'docker build -t ubuntu_j .'
             }
         }
-        stage('Build1') {
+        stage('Tag Image') {
             steps {
-                echo '${microcare}'
-                echo '${devops}'
+               sh 'docker tag ubuntu_j:latest shaikimtiyaz968/ubuntu_j:latest'
             }
         }
-        stage('Deploy') {
+        stage('Push Image') {
             steps {
-                echo 'deploying'
+                sh 'docker login -u shaikimtiyaz968 -p 9182478469'
+                sh 'docker push ubuntu_j:latest'
             }
         }
     }
