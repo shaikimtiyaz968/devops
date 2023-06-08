@@ -1,3 +1,3 @@
 FROM alpine
-RUN apt-get update
-RUN apt-get install -y vim
+RUN yum install update
+RUN yum install -y vim
