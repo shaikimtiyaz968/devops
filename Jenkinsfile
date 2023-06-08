@@ -17,6 +17,11 @@ pipeline {
                bat 'docker tag alpine_j:latest shaikimtiyaz968/alpine_j:latest'
             }
         }
+        stage('Run Image') {
+            steps {
+                bat 'docker run --name alpine_j -p 7007:80 alpine_j'
+            }
+        }
         stage('Push Image') {
             steps {
                 bat 'docker login -u shaikimtiyaz968 -p 9182478469'
