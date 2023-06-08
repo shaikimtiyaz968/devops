@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Run Image') {
             steps {
-                bat 'docker run --name alpine_j -p 7007:80 alpine_j'
+              
                 bat 'docker stop alpine_j'
             }
         }
