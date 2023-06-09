@@ -9,7 +9,7 @@ pipeline {
   
       stage('Build Image') {
             steps {
-                sh 'docker build -t node:8.11-slim Dockerfile13'
+                bat 'docker build -t node:8.11-slim Dockerfile13'
             } 
         }
         stage('Tag Image') {
