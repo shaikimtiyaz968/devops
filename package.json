@@ -1,0 +1,22 @@
+{
+  "name": "devops",
+  "version": "1.0.0",
+  "description": "some of the dockerfile examples",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/git@github.com:shaikimtiyaz968/devops.git"
+  },
+  "author": "Shaik Imtiyaz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://https://github.com/shaikimtiyaz968/devops/issues"
+  },
+  "homepage": "https://github.com/https://github.com/shaikimtiyaz968/devops/issues#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
