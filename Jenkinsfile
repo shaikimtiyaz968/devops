@@ -7,11 +7,16 @@ pipeline {
             }
     }
   
-      stage('Build Image') {
+      stage('Docker down') {
             steps {
-                bat 'docker build -t node:8.11-slim -f Dockerfile13 .'
+                bat 'docker-compose down .'
             } 
         }
-   
+        stage('Docker start') {
+            steps {
+                bat 'docker-compose start'
+            }
+        }
+       
     }
 }
