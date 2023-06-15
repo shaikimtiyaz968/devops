@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Docker start') {
             steps {
-                bat 'docker-compose up'
+                bat 'docker-compose up -d'
             }
         }
                 stage('Push image') {
