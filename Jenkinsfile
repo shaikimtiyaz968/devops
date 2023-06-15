@@ -9,7 +9,7 @@ pipeline {
   
       stage('Docker down') {
             steps {
-                bat 'docker-compose down .'
+                bat 'docker-compose down Dockerfile'
             } 
         }
         stage('Docker start') {
