@@ -10,7 +10,7 @@ services:
        image: nginx:latest
        ports:
            - "7789:80"
-       container_name: YML2
+       container_name: YML3
        volumes:
            - "newvolbuild:/opt/composer"          
       MID:
