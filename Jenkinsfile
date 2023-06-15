@@ -19,7 +19,7 @@ pipeline {
         }
                 stage('Push image') {
                     steps {
-                        bat 'docker login -u shaikimtiyaz968 -p 9182478469
+                        bat 'docker login -u shaikimtiyaz968 -p 9182478469'
                         bat 'docker push shaikimtiyaz968/nginxbuild'
 
             }
