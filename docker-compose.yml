@@ -1,0 +1,27 @@
+services:
+      DB:
+       image: postgres:latest
+       ports:
+           - "1511:5432"
+       environment:
+           - POSTGRES_PASSWORD=microcare
+       container_name: YML
+      WEB:
+       image: nginx:latest
+       ports:
+           - "7789:80"
+       container_name: YML2
+       volumes:
+           - "newvolbuild:/opt/composer"          
+      MID:
+       build: ./
+       image: shaikimtiyaz968/nginxbuild
+       ports:
+           - "6060:80"
+volumes: 
+      newnginxvol:
+       name: newnginxvol
+       external: true
+      newvolbuild:
+       name: newvolbuild
+       external: true
