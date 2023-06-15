@@ -5,7 +5,7 @@ services:
            - "1511:5432"
        environment:
            - POSTGRES_PASSWORD=microcare
-       container_name: YML
+       container_name: YML4
       WEB:
        image: nginx:latest
        ports:
