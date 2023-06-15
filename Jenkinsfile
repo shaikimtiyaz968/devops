@@ -17,6 +17,13 @@ pipeline {
                 bat 'docker-compose up'
             }
         }
+                stage('Push image') {
+                    steps {
+                        bat 'docker login -u shaikimtiyaz968 -p 9182478469
+                        bat 'docker push shaikimtiyaz968/nginxbuild'
+
+            }
+        }
        
     }
 }
